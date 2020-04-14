@@ -51,6 +51,7 @@ Clientes distribuidos (General)
  - [RFE] Se obtiene más información de las firmas recuperadas: certificado utilizado para firmar, formato longevo al que se actualizaron y periodo de gracia que hay que esperar.
  - [RFE] Se permite establecer configuración adicional para la configuración de la Plataforma de validación y actualización de firmas.
  - [RFE] Se incluye un método para la recuperación asíncrona de firmas (firmas para las que se ha pedido esperar un periodo de gracia).
+ - [RFE] Se identifica cuando el error en la firma se originó en el gestor de documentos del servidor.
 
 Cliente distribuido Java
 
