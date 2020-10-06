@@ -2,7 +2,7 @@ Principales cambios en la historia de versiones:
 
 v2.4
 
-Componente central
+Componente centralproxy
 
  - [RFE] Se integra un nuevo sistema de gestión de logs que permite la salida de los logs a un fichero independiente.
  - [RFE] Cambios en los logs del sistema para un mejor seguimiento de las transacciones.
@@ -25,7 +25,8 @@ Componente central
  - [RFE] Se actualiza al Cliente @firma 1.7 (con lo que se elimina el soporte del MiniApplet y AutoFirma WebStart).
  - [RFE] Se corrige la carga del Cliente @firma cuando se configura expresamente la URL pública de acceso.
  - [RFE] Se muestra el número de versión de FIRe en el pie de las página web accesibles por los usuarios.
- - [RFE] Se permite configurar un usuario/contraseña para la autenticación frente a un proxy de red a través de variables de entorno de Java.
+ - [RFE] Se permite configurar un usuario/contraseña para la autenticación frente a un proxy de red a través de las variables de entorno de Java.
+ - [RFE] Se permite el envío de alertas críticas a GrayLog.
  - [BUG] Se corrige el conector con el servicio de pruebas, para que no sea necesario que se le configure un almacén para la autenticación SSL cliente, aun cuando puede ser no necesaria esta autenticación.
  - [BUG] Se permite el uso del parámetro "headless" para la selección automática de un certificado local durante la operación de firma de lotes.
  - [BUG] Se corrige el que se estableciese la política de firma de la AGE cuando se indicaba el parámetro "expPolicy" y un formato de firma que no la soportase (FacturaE, NONE, CAdES-ASiC o XAdES-ASiC).
@@ -37,6 +38,7 @@ Componente central
 
 Módulo de administración.
 
+ - [RFE] Nuevo diseño de la interfaz gráfica.
  - [RFE] Se integra un nuevo apartado para la consulta de logs del componente central.
  - [RFE] Se integra un nuevo apartado para la visualización de informes predefinidos sobre los datos estadísticos almacenados.
  - [RFE] Se introduce un mecanismo para la recuperación de contraseña de los administradores.
@@ -52,6 +54,8 @@ Clientes distribuidos (General)
  - [RFE] Se permite establecer configuración adicional para la configuración de la Plataforma de validación y actualización de firmas.
  - [RFE] Se incluye un método para la recuperación asíncrona de firmas (firmas para las que se ha pedido esperar un periodo de gracia).
  - [RFE] Se identifica cuando el error en la firma se originó en el gestor de documentos del servidor.
+ - [RFE] Se incluye en el antiguo API para la operación directa con el proveedor de firma en la nube un parámetro para la selección del proveedor.
+ - [BUG] Se recupera el funcionamiento del antiguo API para la operación directa con el proveedor de firma en la nube.
 
 Cliente distribuido Java
 
