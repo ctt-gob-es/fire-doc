@@ -2,7 +2,7 @@ Principales cambios en la historia de versiones:
 
 v2.4
 
-Componente centralproxy
+Componente central
 
  - [RFE] Se integra un nuevo sistema de gestión de logs que permite la salida de los logs a un fichero independiente.
  - [RFE] Cambios en los logs del sistema para un mejor seguimiento de las transacciones.
@@ -15,8 +15,9 @@ Componente centralproxy
  - [RFE] Se permite utilizar un fichero de configuracion para el gestor de documentos por defecto.
  - [RFE] Se restaura la conexión con la BD cuando está disponible aún a pesar de haberse producido errores durante el arranque del componente.
  - [RFE] Se permite configurar plataformas de actualización y validación de firmas distintas a la Plataforma @firma (la lógica de conexión debe implementarla el organismo interesado).
- - [RFE] Se introduce la operación de validación de las firmas generadas como alternativa a la actualización de las firmas a formatos longevos (la actualización ya implica la validación).
- - [RFE] Se permite que las aplicaciones configuren que se obvie el periodo de gracia de las firmas.
+ - [RFE] Se migra el módulo de actualización y validación de firma con la Plataforma @firma para el uso de Axis2.
+ - [RFE] Se introduce la operación de validación de las firmas generadas.
+ - [RFE] Se permite que las aplicaciones configuren que se obvie el periodo de gracia cuando se envíen firmas a actualizar a la Platafoma @firma.
  - [RFE] Se integra el soporte de actualización asíncrona de firmas (aquellas que requieren la espera de un periodo de gracia para actualizar).
  - [RFE] Se permite configurar la recuperación de las firmas parcialmente actualizadas.
  - [RFE] Se permite restringir el acceso a gestores de documentos por parte de aplicaciones.
@@ -33,7 +34,7 @@ Componente centralproxy
  - [BUG] Se mejora de la compatibilidad con los clientes móviles que no devuelven el certificado de firma. Ahora no da error al recuperar las firmas, pero aún pueden fallar si el DocumentManager lo exije.
  - [BUG] Corrección de la compatibilidad para la actualización a formatos T-Level, LT-Level y LTA-Level.
  - [BUG] Se corrige el error en los parámetros de configuración (extraParams) utilizados cuando se ejecutaban firmas con certificado local.
- - [BUG] Se corrige error al notificar el fin de la transacción a Cl@ve Firma.
+ - [BUG] Se corrige error al notificar a Cl@ve Firma el fin de una transacción.
  - [BUG] Se corrige el que se redirigiese a la página de error de FIRe cuando fallaba la operación de firma en la nube y se hubiese establecido el uso de un proveedor de firma concreto.
 
 Módulo de administración.
