@@ -28,6 +28,7 @@ Componente central
  - [RFE] Se muestra el número de versión de FIRe en el pie de las página web accesibles por los usuarios.
  - [RFE] Se permite configurar un usuario/contraseña para la autenticación frente a un proxy de red a través de las variables de entorno de Java.
  - [RFE] Se permite el envío de alertas críticas a GrayLog.
+ - [RFE] Se actualiza el conector de la FNMT a la versión 2.0.
  - [BUG] Se corrige el conector con el servicio de pruebas, para que no sea necesario que se le configure un almacén para la autenticación SSL cliente, aun cuando puede ser no necesaria esta autenticación.
  - [BUG] Se permite el uso del parámetro "headless" para la selección automática de un certificado local durante la operación de firma de lotes.
  - [BUG] Se corrige el que se estableciese la política de firma de la AGE cuando se indicaba el parámetro "expPolicy" y un formato de firma que no la soportase (FacturaE, NONE, CAdES-ASiC o XAdES-ASiC).
@@ -51,6 +52,7 @@ Aplicación de carga de estadísticas
  - [RFE] Se crea una aplicación independiente para la carga en base de datos de las estadísticas generadas en fichero por el componente central.
 
 Clientes distribuidos (General)
+
  - [RFE] Se obtiene más información de las firmas recuperadas: certificado utilizado para firmar, formato longevo al que se actualizaron y periodo de gracia que hay que esperar.
  - [RFE] Se permite establecer configuración adicional para la configuración de la Plataforma de validación y actualización de firmas.
  - [RFE] Se incluye un método para la recuperación asíncrona de firmas (firmas para las que se ha pedido esperar un periodo de gracia).
@@ -61,9 +63,10 @@ Clientes distribuidos (General)
 Cliente distribuido Java
 
  - [RFE] Se permite indicar el alias del certificado del almacén de certificados cliente para la conexión con el componente central.
+ - [BUG] Se omite la modificación del gestor de conexiones por defecto.
 
 Cliente distribuido .NET
-
+ - [RFE] Se incrementa la versión del Framework .net a la 4.5.
  - [RFE] Se permite indicar el alias del certificado del almacén de certificados cliente para la conexión con el componente central.
  - [RFE] Se actualizan las páginas de prueba .NET y se incluye una página de prueba para la recuperación asíncrona de una firma.
 
@@ -72,18 +75,20 @@ Cliente distribuido PHP
  - [RFE] Se actualiza al modelo de PHP 5 y superiores
  - [RFE] Se agrega el cliente "fire_client.php" con el mismo modelo de cliente que ya existía en los componentes Java y .NET.
  - [RFE] Se crean páginas de prueba PHP con el nuevo "fire_client.php" y se incluye una página de prueba para la recuperación asíncrona de una firma.
- - [BUG] Se actualiza el cliente "fire_api.php" para corregir los problemas de compatibilidad con los despliegues de alta compatibilidad (requiere cambios en la aplicación que integra el cliente).
+ - [BUG] Se actualiza el cliente "fire_api.php" para corregir los problemas de compatibilidad con los despliegues de alta disponibilidad (requiere cambios en la aplicación que integra el cliente).
  - [BUG] Se actualizan las páginas de prueba PHP con los cambios del API.
  - [BUG] Se corrige que no se aplicase el formato de actualización configurado.
 
 Servicio simulador de Cl@ve Firma
 
  - [RFE] Se incluyen certificados de prueba para los usuarios de prueba de Cl@ve.
+ - [RFE] Se actualizan los certificados de prueba caducados.
 
 Aplicación de pruebas
 
- - [RFE] Se simplifica a los desarrolladores la configuración de los parametros de firma (extraParms) en la página de firma simple.
+ - [RFE] Se simplifica a los desarrolladores la configuración de los parametros de firma (extraParams) en la página de firma simple.
  - [RFE] Se incluye el soporte de firmas con periodo de gracia.
+ - [RFE] Se agrega a la página del resultado de firma un enlace para la descarga de la firma generada.
 
 ----------
 
